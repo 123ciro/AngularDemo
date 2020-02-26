@@ -1,0 +1,49 @@
+<div class="container">
+
+<div class="row justify-content-center">
+    <h1>
+        <strong>Listados</strong>
+    </h1>
+</div>
+
+<br/>
+  <div>
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Nombres</th>
+              <th scope="col">Apellidos</th>
+              <th scope="col">Direccion</th>
+              <th scope="col">Fecha de Nacimiento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let fila of listaPersona | paginate: {itemsPerPage:5, currentPage:pageActual}">
+              <td>{{ fila.nombres }}</td>
+              <td>{{ fila.apellidos }}</td>
+              <td>{{ fila.latitud }}, {{ fila.longitud }}</td>
+              <td>{{ fila.fechaNacimiento }}</td>
+             
+            </tr>
+          </tbody>
+        </table>
+ 
+             <!-- Paginacion-->
+             <div class="row justify-content-end">
+                    <pagination-controls 
+                    responsive="true"
+                    previousLabel="Anterior"
+                    nextLabel="Siguiente"
+                    
+                    (pageChange)="pageActual = $event">
+                    
+                    </pagination-controls>
+                </div>
+      </div>  
+
+            
+            
+            
+            
+            
+</div>

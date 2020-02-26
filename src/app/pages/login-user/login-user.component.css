@@ -1,0 +1,16 @@
+html,
+body {
+  height: 100%;
+}
+
+
+.centrado {
+  width: 100%;
+  max-width: 330px;
+  padding: 70px;
+  margin: 0 auto;
+}
+
+.buttonsubmit{
+margin-left: 30px;
+}

@@ -1,0 +1,32 @@
+<div class="centrado">
+<h1 style="text-align: center;">Login </h1>
+
+<form [formGroup]="frmLogin" (ngSubmit)="enviar()">
+    <div class="form-group ">
+      <input type="email" formControlName="user"  class="form-control col-md-12"  placeholder="User" >
+    </div>
+    <div class="form-group">
+      <input type="password" placeholder="Password" formControlName="password" class="form-control col-md-12" >
+    </div>
+   <!--<div class="form-group form-check">
+      <input type="checkbox"  class="form-check-input">
+      <label class="form-check-label"  >Recordarme</label>
+    </div>-->
+    <button type="submit" class="btn btn-primary buttonsubmit">Ingresar</button>
+  </form>
+
+  
+  <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="mostrar">
+      <strong>Usuario y Contraseña deben ser Ingresados!</strong> 
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+
+
+
+ 
+
+</div>
+
